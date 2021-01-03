@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:package_info/package_info.dart';
+import 'package:g_package_info/package_info.dart';
 import 'update_entity.dart';
 import 'update_info.dart';
 export 'update_entity.dart';
@@ -272,7 +272,7 @@ class FlutterXUpdate {
     //进行二次校验
     bool hasUpdate = updateInfo.updateStatus != NO_NEW_VERSION;
     if (hasUpdate) {
-      PackageInfo packageInfo = await PackageInfo.fromPlatform();
+      GPackageInfo packageInfo = await GPackageInfo.fromPlatform();
       //服务器返回的最新版本小于等于现在的版本，不需要更新
       if (updateInfo.versionCode <= int.parse(packageInfo.buildNumber)) {
         hasUpdate = false;
