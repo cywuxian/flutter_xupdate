@@ -14,7 +14,7 @@ dependencies:
     sdk: flutter
   g_package_info:
     git:
-      url: https://github.com/msidolphin/flutter_package_info
+      url: https://github.com/cywuxian/flutter_xupdate
       ref: '2.0.1'
 
 dev_dependencies:
